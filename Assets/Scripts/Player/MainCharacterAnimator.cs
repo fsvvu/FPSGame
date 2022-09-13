@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class MainCharacterAnimator : MonoBehaviour
 {
     public Animator animator;
+    public ActiveWeapon activeweapon;
     public List<Animator> weaponAnimators;
 
     [SerializeField]
@@ -41,6 +42,7 @@ public class MainCharacterAnimator : MonoBehaviour
             QualitySettings.vSyncCount = 0;
         }
 
+        activeweapon = GetComponent<ActiveWeapon>();
         movementController = GetComponent<MovementController>();
         inputController = GetComponent<InputController>();
         shootController = GetComponent<ShootController>();
@@ -82,7 +84,7 @@ public class MainCharacterAnimator : MonoBehaviour
         #endregion
 
         #region Shoot
-        if (ActiveWeapon.Instance.isHoldWeapon) // only when test pickup weapon system
+        if (/*ActiveWeapon.Instance.*/activeweapon.isHoldWeapon) // only when test pickup weapon system
         {
             if (endFireSession)
             {

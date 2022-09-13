@@ -13,6 +13,8 @@ public class CameraShake : MonoBehaviour
     public float duration;
     public float yAxisValue;
 
+    [SerializeField]
+    InputController inputController;
     float horizontalRecoil, verticalRecoil;
     float time;
     public int index = 0;
@@ -29,7 +31,7 @@ public class CameraShake : MonoBehaviour
         yAxisValue = playerAiming.m_VerticalAxis.Value;
         if (rigController)
         {
-            rigController.SetBool("isAttack", InputController.Instance.isFire);
+            rigController.SetBool("isAttack", inputController.isFire);
         }
 
         if (time > 0)

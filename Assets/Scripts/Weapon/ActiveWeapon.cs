@@ -62,7 +62,7 @@ public class ActiveWeapon : MonoBehaviour
 
     private void Awake()
     {
-        MakeInstance();
+        //MakeInstance();
     }
 
     // Start is called before the first frame update

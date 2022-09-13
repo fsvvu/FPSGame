@@ -42,7 +42,7 @@ public class InputController : MonoBehaviour
 
     private void Awake()
     {
-        MakeInstance();
+        //MakeInstance();
     }
 
     // Start is called before the first frame update

@@ -50,6 +50,7 @@ public class RaycastWeapon : MonoBehaviour
         muzzleFlash.Emit(1);
         recoil.GenerateRecoil(weaponStats.name);
 
+        #region Spawn bullet object and tracer
         //Spawn casing prefab at spawnpoint
         //Instantiate(weaponStats.casingPrefab,
         //    casingSpawnPoint.position,
@@ -60,6 +61,7 @@ public class RaycastWeapon : MonoBehaviour
 
         //var tracer = Instantiate(weaponStats.bulletTracer, raycastOrigin.position, Quaternion.identity);
         //tracer.AddPosition(bulletSpawnPoint.position);
+        #endregion
 
         if (Physics.Raycast(raycastOrigin.position, fpsCameraTransform.forward, out hit, range, layerMask))
         {
@@ -69,11 +71,11 @@ public class RaycastWeapon : MonoBehaviour
 
             PoolingManager.Instance.UseOneHItEffect(hit);
             //tracer.transform.position = hit.point;
-            if (hit.transform.gameObject.tag == "Wall")
-            {
-                GameObject wall = hit.transform.gameObject;
-                WallSpawner.Instance.DestroyWall(wall.GetComponent<WallBehaviour>().index, hit);
-            }
+            //if (hit.transform.gameObject.tag == "Wall")
+            //{
+            //    GameObject wall = hit.transform.gameObject;
+            //    WallSpawner.Instance.DestroyWall(wall.GetComponent<WallBehaviour>().index, hit);
+            //}
         }
         //else tracer.transform.position += fpsCameraTransform.forward * range;
     }

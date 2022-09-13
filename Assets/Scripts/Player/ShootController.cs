@@ -55,7 +55,7 @@ public class ShootController : MonoBehaviour
     void Start()
     {
         animationEvents.weaponAnimationEvent.AddListener(OnAnimationEvent);
-        inputController = InputController.Instance;
+        inputController = GetComponent<InputController>();
 
         //Weapon sway
         currentAmmo = ammo;

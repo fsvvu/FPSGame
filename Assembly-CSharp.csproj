@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\Player\HealthController.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\DebrisScript.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\DebrisScript.cs" />
     <Compile Include="Assets\Project\UIFrenzyController.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
@@ -68,35 +68,35 @@
     <Compile Include="Assets\RockVR\Video\Demo\Scripts\AutoRotate.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Scripts\SkinnedCollisionHelper.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Casings_&amp;_Projectiles\GrenadeScript.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Casings_&amp;_Projectiles\GrenadeScript.cs" />
     <Compile Include="Assets\RockVR\Common\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\Networking\PlayFabAuth.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\ExplosiveBarrelScript.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\TargetScript.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\ExplosiveBarrelScript.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Demo_Scene_Components\Scripts\TargetScript.cs" />
     <Compile Include="Assets\Scripts\Player\ShootController.cs" />
     <Compile Include="Assets\Scripts\Player\MovementController.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
-    <Compile Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Demos\Environment_Free\MouseLook.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Demos\Environment_Free\MouseLook.cs" />
     <Compile Include="Assets\Scripts\CarController.cs" />
     <Compile Include="Assets\Prefabs\Project\LookAt.cs" />
     <Compile Include="Assets\RockVR\Common\Scripts\Singleton.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\Base\VideoCaptureCtrlBase.cs" />
     <Compile Include="Assets\RockVR\Common\Scripts\EventDelegate.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Casings_&amp;_Projectiles\CasingScript.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ExplosionScript.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Casings_&amp;_Projectiles\CasingScript.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ExplosionScript.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponPickup.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponAnimationEvents.cs" />
     <Compile Include="Assets\RockVR\Video\Demo\Scripts\VideoCaptureUI.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ImpactScript.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ImpactScript.cs" />
     <Compile Include="Assets\Scripts\Player\RaycastWeapon.cs" />
     <Compile Include="Assets\Scripts\UIGameTest.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\AutomaticGunScriptLPFP.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Bullet\BulletScript.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\AutomaticGunScriptLPFP.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Bullet\BulletScript.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\Base\VideoCaptureBase.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\FPSController\FpsControllerLPFP.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\FPSController\FpsControllerLPFP.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Scripts\SyncTransform.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\Screenshot.cs" />
@@ -106,7 +106,7 @@
     <Compile Include="Assets\Scripts\Player\JumpChecker.cs" />
     <Compile Include="Assets\Scripts\Stats\WeaponStats.cs" />
     <Compile Include="Assets\Scripts\Weapon\ActiveWeapon.cs" />
-    <Compile Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Demos\Environment_Free\PlayerMovement.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Demos\Environment_Free\PlayerMovement.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\Scripts\Player\MainCharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\Networking\MultiPlayerManager.cs" />
@@ -118,15 +118,15 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\AudioCapture.cs" />
     <Compile Include="Assets\RockVR\Common\Scripts\FPSDisplay.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Misc\LookAtCamera.cs" />
-    <Compile Include="Assets\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\HandgunScriptLPFP.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Misc\LookAtCamera.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\HandgunScriptLPFP.cs" />
     <Compile Include="Assets\Scripts\Manager\BulletHoleBehaviour.cs" />
-    <Compile Include="Assets\_Temp_Effect\Misc Effects\Scripts\SpawnEffect.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp_Effect\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\Scripts\Weapon\BulletController.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\Config.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Project\GameSettings.cs" />
-    <Compile Include="Assets\_Temp\Test.cs" />
+    <Compile Include="Assets\_Imp Asset\_Temp\Test.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\VideoCapture.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\Utils\Utils.cs" />
     <Compile Include="Assets\Scripts\UI\WeaponUI.cs" />
@@ -144,67 +144,67 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Water_Shader_WebGl.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Water_Shader_WebGl.shader" />
      <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Characters\Sources\Modular_NPC\Shaders\PT_Medieval_Modular_NPC_Shader_Toon.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Plants_Shader.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Characters\Sources\Modular_NPC\Shaders\PT_Medieval_Modular_NPC_Shader_Toon.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Plants_Shader.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <None Include="Assets\_Temp_Effect\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
+     <None Include="Assets\_Imp Asset\_Temp_Effect\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
      <None Include="Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
      <None Include="Assets\AssetPackage\BigRookGames\_AssetPacks\Stylized Weapon Pack\M4 Scoped Assault Rifle\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\RockVR\Video\Shaders\CopyReverse.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader_VS.shader" />
-     <None Include="Assets\_Temp_Effect\Magic Effects\Shaders\Ice.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader.shader" />
-     <None Include="Assets\_Temp_Effect\Misc Effects\Shaders\Respawn.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader_VS.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Effect\Magic Effects\Shaders\Ice.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Effect\Misc Effects\Shaders\Respawn.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\Free Stylized Skybox\ReadMe.txt" />
+     <None Include="Assets\_Imp Asset\Free Stylized Skybox\ReadMe.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\RockVR\Video\Shaders\Stereoscopic.shader" />
      <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\RockVR\Video\Shaders\CubemapDisplayPro.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Water_Shader.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Rock_Shader_VS.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Water_Shader.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Rock_Shader_VS.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
      <None Include="Assets\Photon\PhotonChat\Demos\DemoChat\Files\eurof_tt.txt" />
      <None Include="Assets\RockVR\Video\Shaders\Cubemap2EquirectangularPro.shader" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Plants_Shader_VS.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Plants_Shader_VS.shader" />
      <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.dll" />
      <None Include="Assets\RockVR\Video\Shaders\CubemapToCylindrical.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\RockVR\Video\Shaders\DownsamplePro.shader" />
      <None Include="Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader_VS.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader_VS.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\RockVR\Video\Plugins\Windows\x64\VideoCaptureLib.dll" />
-     <None Include="Assets\_Temp_Effect\Misc Effects\Shaders\FireFly.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Effect\Misc Effects\Shaders\FireFly.shader" />
      <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
      <None Include="Assets\RockVR\Video\Shaders\FlippingTexture.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Rock_Shader.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Rock_Shader.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\VS_indirect.cginc" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\VS_indirect.cginc" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\RockVR\Video\Plugins\Windows\x86\VideoCaptureLib.dll" />
      <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\Fantasy_Kingdom_Pack_Lite\Demo\Read me01.txt" />
-     <None Include="Assets\_Television_set\SpecGrayscaleSF.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader_VS.shader" />
-     <None Include="Assets\_Temp_Polytope Studio\Lowpoly Medieval Characters\Sources\Modular_NPC\Shaders\PT_Medieval_Modular_NPC_Shader_PBR.shader" />
-     <None Include="Assets\_Temp_Effect\Misc Effects\Shaders\Dissolve.shader" />
+     <None Include="Assets\_Imp Asset\Fantasy_Kingdom_Pack_Lite\Demo\Read me01.txt" />
+     <None Include="Assets\_Imp Asset\_Television_set\SpecGrayscaleSF.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader_VS.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Characters\Sources\Modular_NPC\Shaders\PT_Medieval_Modular_NPC_Shader_PBR.shader" />
+     <None Include="Assets\_Imp Asset\_Temp_Effect\Misc Effects\Shaders\Dissolve.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.0b11\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -853,6 +853,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PhotonChat.csproj">
+      <Project>{FA725516-54B8-31AC-6494-B32C39232FB3}</Project>
+      <Name>PhotonChat</Name>
+    </ProjectReference>
     <ProjectReference Include="PlayFabSDKEditor.csproj">
       <Project>{6DA15BA5-5B61-A495-FB08-19E51D56242D}</Project>
       <Name>PlayFabSDKEditor</Name>
@@ -865,37 +869,13 @@
       <Project>{C54669FC-3BB8-4985-3C56-90437D8F755C}</Project>
       <Name>PlayFab</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{A7FAD3D6-C59A-F3AD-D4D7-F4581383B9F4}</Project>
-      <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{2752A25F-3CFF-8D87-C1B3-759173C5FF23}</Project>
-      <Name>PunDemos.DemoSlotcarEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{EFB3C64D-9ED3-D298-FA96-060257E438B0}</Project>
-      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{80B1E2FE-AEAB-2D62-0196-C27D417A9D37}</Project>
-      <Name>PhotonUnityNetworking.Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{F8C516D2-9087-03FA-63D2-0CF8CB70A066}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonChat.csproj">
-      <Project>{FA725516-54B8-31AC-6494-B32C39232FB3}</Project>
-      <Name>PhotonChat</Name>
+    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
+      <Project>{89930DF3-D78E-54F2-81F9-3C7B696F0DFF}</Project>
+      <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
       <Project>{6159F507-D62C-B604-95CF-F2DA4A7C2DF9}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{89930DF3-D78E-54F2-81F9-3C7B696F0DFF}</Project>
-      <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
       <Project>{BE3207FA-B4DF-7F8F-D45F-61C9E8254316}</Project>
@@ -904,6 +884,26 @@
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{A8BFFF95-18B7-1C52-80BD-56ED94425099}</Project>
       <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
+      <Project>{80B1E2FE-AEAB-2D62-0196-C27D417A9D37}</Project>
+      <Name>PhotonUnityNetworking.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{A7FAD3D6-C59A-F3AD-D4D7-F4581383B9F4}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
+      <Project>{F8C516D2-9087-03FA-63D2-0CF8CB70A066}</Project>
+      <Name>PhotonUnityNetworking.Demos</Name>
+    </ProjectReference>
+    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
+      <Project>{2752A25F-3CFF-8D87-C1B3-759173C5FF23}</Project>
+      <Name>PunDemos.DemoSlotcarEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
+      <Project>{EFB3C64D-9ED3-D298-FA96-060257E438B0}</Project>
+      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
