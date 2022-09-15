@@ -7,7 +7,7 @@ public class UIGameTest : MonoBehaviour
 {
     public Text[] parameterTexts;
     public InputField targetFrameRateText;
-    public MainCharacterAnimator mainCharacterAnimator;
+    public MainPlayerAnimator mainCharacterAnimator;
     public InputController inputController;
 
     public int countSpecifyParemeters;

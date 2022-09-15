@@ -23,7 +23,7 @@ public class MovementController : MonoBehaviour
 
     private InputController inputController;
     private CapsuleCollider capsuleCollider;
-    private MainCharacterAnimator mainCharacterAnimator;
+    private MainPlayerAnimator mainCharacterAnimator;
     private Vector3 m_GroundNormal;
 
     public float k_GroundCheckDistanceInAir = 0.07f;
@@ -39,7 +39,7 @@ public class MovementController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         inputController = GetComponent<InputController>();
-        mainCharacterAnimator = GetComponent<MainCharacterAnimator>();
+        mainCharacterAnimator = GetComponent<MainPlayerAnimator>();
     }
 
     private void Update()
@@ -49,7 +49,7 @@ public class MovementController : MonoBehaviour
         // jumping
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             if (isGrounded)
             {
                 isGrounded = false;

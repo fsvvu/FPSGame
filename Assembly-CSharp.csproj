@@ -108,7 +108,7 @@
     <Compile Include="Assets\Scripts\Weapon\ActiveWeapon.cs" />
     <Compile Include="Assets\_Imp Asset\_Temp_Polytope Studio\Lowpoly Medieval Demos\Environment_Free\PlayerMovement.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
-    <Compile Include="Assets\Scripts\Player\MainCharacterAnimator.cs" />
+    <Compile Include="Assets\Scripts\Player\MainPlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\Networking\MultiPlayerManager.cs" />
     <Compile Include="Assets\Prefabs\Project\ControlVideo.cs" />
     <Compile Include="Assets\Project\WallBehaviour.cs" />
@@ -138,6 +138,7 @@
     <Compile Include="Assets\RockVR\Video\Scripts\VideoCaptureCtrl.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\VideoPlayer.cs" />
     <Compile Include="Assets\Scripts\SetupUtilities.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAim.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\RockVR\Video\Shaders\Cubemap2Equirectangular.shader" />

@@ -14,7 +14,7 @@ public class OnGrounedCollider : MonoBehaviour
     string triggerCollider;
 
     MovementController movementController;
-    MainCharacterAnimator mainCharacterAnimator;
+    MainPlayerAnimator mainCharacterAnimator;
     SkinnedMeshRenderer skinnedMesh;
     MeshCollider meshCollider;
 
@@ -22,7 +22,7 @@ public class OnGrounedCollider : MonoBehaviour
     void Start()
     {
         movementController = rootGameObject.GetComponent<MovementController>();
-        mainCharacterAnimator = rootGameObject.GetComponent<MainCharacterAnimator>();
+        mainCharacterAnimator = rootGameObject.GetComponent<MainPlayerAnimator>();
     }
 
     //private void OnTriggerStay(Collider collider)

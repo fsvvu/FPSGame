@@ -12,11 +12,10 @@ public class InputController : MonoBehaviour
     public bool isIdle;
     public bool isWalk, isWalkRight, isWalkLeft, isWalkBackward, isWalkForward;
     public bool isAim;
-    public bool isFire;
+    public bool isFire, isStopFire;
     public bool isReload;
     public bool isManipulationFire;
-    public bool isJump;
-    public bool isBrake;
+    public bool isJump, isBrake;
 
     public float horizontal, vertical;
     public float rawHorizontal, rawVertical;
@@ -54,6 +53,13 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateInputValue();
+        UpdateFireValue();
+        UpdateAnimationValue();
+    }
+
+    void UpdateInputValue()
+    {
         move.x = horizontal = Input.GetAxis("Horizontal");
         move.y = vertical = Input.GetAxis("Vertical");
         rawHorizontal = Input.GetAxisRaw("Horizontal");
@@ -64,12 +70,21 @@ public class InputController : MonoBehaviour
         isJump = isBrake = Input.GetKeyDown(KeyCode.Space);
         isReload = Input.GetKeyDown(KeyCode.R);
         isAim = Input.GetMouseButtonDown(1);
+    }    
 
+    void UpdateFireValue()
+    {
         if (fireValue == 0) isFire = false;
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            isStopFire = true;
+        }
 
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {
             isFire = true;
+            isStopFire = false;
             fireValue += 0.25f;
         }
         else
@@ -78,11 +93,15 @@ public class InputController : MonoBehaviour
         }
 
         fireValue = Mathf.Clamp(fireValue, 0, 2);
+    }    
 
-        UpdateStatusAnimation();
+    void UpdateAnimationValue()
+    {
+        UpdateMovementAnimationValue();
+        UpdateFireAnimationValue();
     }
 
-    void UpdateStatusAnimation()
+    void UpdateMovementAnimationValue()
     {
         if (horizontal != 0 || vertical != 0)
         {
@@ -94,11 +113,14 @@ public class InputController : MonoBehaviour
             isIdle = true;
             isWalk = false;
         }
+    }
 
+    void UpdateFireAnimationValue()
+    {
         if (isFire || isAim)
         {
             isManipulationFire = true;
         }
         else isManipulationFire = false;
-    }
+    }    
 }

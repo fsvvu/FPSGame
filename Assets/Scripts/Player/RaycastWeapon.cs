@@ -8,7 +8,6 @@ public class RaycastWeapon : MonoBehaviour
     public CameraShake recoil;
 
     public Transform raycastOrigin;
-    //public Transform raycastDestination;
 
     public Transform fpsCameraTransform;
 
@@ -32,14 +31,12 @@ public class RaycastWeapon : MonoBehaviour
     public float maxSwayAmount = 0.06f;
     public float swaySmoothValue = 4.0f;
 
-    private Vector3 initialSwayPosition;
-
     private void Start()
     {
         recoil = GetComponent<CameraShake>();
         weaponStats = GetComponent<WeaponPickup>().weaponStats;
+
         fpsCameraTransform = Camera.main.transform;
-        //initialSwayPosition = transform.localPosition;
         layerMask = ~(1 << LayerMask.NameToLayer("Ignore Raycast") | 1 << LayerMask.NameToLayer("Ignore Player") | 1 << LayerMask.NameToLayer("Only Player"));
         hitEffectPrefab = Instantiate(weaponStats.hitEffectPrefab, transform);
         hitEffectPrefab.gameObject.layer = LayerMask.NameToLayer("Default");
@@ -70,12 +67,15 @@ public class RaycastWeapon : MonoBehaviour
             hitEffectPrefab.Emit(5);
 
             PoolingManager.Instance.UseOneHItEffect(hit);
+
+            #region Minigame Test
             //tracer.transform.position = hit.point;
             //if (hit.transform.gameObject.tag == "Wall")
             //{
             //    GameObject wall = hit.transform.gameObject;
             //    WallSpawner.Instance.DestroyWall(wall.GetComponent<WallBehaviour>().index, hit);
             //}
+            #endregion
         }
         //else tracer.transform.position += fpsCameraTransform.forward * range;
     }

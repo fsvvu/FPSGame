@@ -32,23 +32,25 @@ public class ShootController : MonoBehaviour
     //Check if out of ammo
     private bool outOfAmmo;
 
-    [Header("Muzzleflash Settings")]
-    public ParticleSystem sparkParticles;
-    public ParticleSystem muzzleParticles;
-    public int maxRandomValue = 5;
-    public int minSparkEmission = 1;
-    public int maxSparkEmission = 7;
-    public bool randomMuzzleflash = false;
-    [Range(2, 25)]
-    public bool enableMuzzleflash = true;
-    public bool enableSparks = true;
+    #region Advance Settings for muzzle and flash effect
+    //[Header("Muzzleflash Settings")]
+    //public ParticleSystem sparkParticles;
+    //public ParticleSystem muzzleParticles;
+    //public int maxRandomValue = 5;
+    //public int minSparkEmission = 1;
+    //public int maxSparkEmission = 7;
+    //public bool randomMuzzleflash = false;
+    //[Range(2, 25)]
+    //public bool enableMuzzleflash = true;
+    //public bool enableSparks = true;
 
-    private int minRandomValue = 1;
-    private int randomMuzzleflashValue;
+    //private int minRandomValue = 1;
+    //private int randomMuzzleflashValue;
 
-    [Header("Muzzleflash Light Settings")]
-    public Light muzzleflashLight;
-    public float lightDuration = 0.02f;
+    //[Header("Muzzleflash Light Settings")]
+    //public Light muzzleflashLight;
+    //public float lightDuration = 0.02f;
+    #endregion
 
     // Start is called before the first frame update
 
@@ -86,7 +88,7 @@ public class ShootController : MonoBehaviour
                 outOfAmmo = false;
             }
 
-            if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && !outOfAmmo && !isReloading)
+            if (inputController.isFire && !outOfAmmo && !isReloading)
             {
                 //Shoot automatic
                 if (Time.time - lastFired > 1 / fireRate)
@@ -110,7 +112,7 @@ public class ShootController : MonoBehaviour
                 }
             }
 
-            if (Input.GetMouseButtonUp(0))
+            if (inputController.isStopFire)
             {
                 isFire = false;
                 raycastWeapon.StopFiring();
@@ -138,6 +140,16 @@ public class ShootController : MonoBehaviour
         isReloading = false;
     }
 
+    public void PlayAimanimation()
+    {
+        rigController.SetTrigger("Aim");
+    }
+
+    public void ApplyAimingAttributes()
+    {
+
+    }
+    
     void OnAnimationEvent(string eventName)
     {
         switch (eventName)  
