@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerAim : MonoBehaviour
 {
     private InputController inputController;
-    private CameraShake cameraShake;
+    [SerializeField]
+    private bool inAim = false;
 
     // Start is called before the first frame update
     void Start()
     {
         inputController = GetComponent<InputController>();
-        cameraShake = GetComponent<CameraShake>();
     }
 
     // Update is called once per frame
@@ -20,8 +20,9 @@ public class PlayerAim : MonoBehaviour
 
     }
 
-    public void PlayAimAnimation(string weaponName)
+    public void PlayAimAnimation(CameraShake cameraShake, string weaponName)
     {
-        cameraShake.PlayAimAnimation(weaponName);
+        cameraShake.PlayAimAnimation(weaponName, inAim);
+        inAim = !inAim;
     }
 }

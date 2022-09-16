@@ -77,10 +77,12 @@ public class CameraShake : MonoBehaviour
         rigController.Play("Moving Camera Effect");
     }
 
-    public void PlayAimAnimation(string weaponName)
+    public void PlayAimAnimation(string weaponName, bool inAim)
     {
-        rigController.Play("Aim " + weaponName + " Effect");
-        Debug.Log("Aim " + weaponName + " Effect");
+        if (inAim == false)rigController.Play("Aim " + weaponName + " Effect");
+        //else rigController.StopPlayback();
+
+        rigController.SetBool("inAim", !inAim);
     }
 
     public void SetUpWeaponRecoilForNewWeapon(Cinemachine.CinemachineVirtualCamera newCamera, Animator newRigController)

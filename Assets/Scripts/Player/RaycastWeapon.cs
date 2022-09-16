@@ -84,6 +84,11 @@ public class RaycastWeapon : MonoBehaviour
         cameraShake.ResetRecoil(weaponStats.name);
     }
 
+    public CameraShake GetCamerShake()
+    {
+        return cameraShake;
+    }    
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

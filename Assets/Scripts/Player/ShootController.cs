@@ -154,7 +154,7 @@ public class ShootController : MonoBehaviour
 
     public void PlayAimanimation()
     {
-        playerAim.PlayAimAnimation(activeWeapon.GetCurrentWeaponName());
+        playerAim.PlayAimAnimation(raycastWeapon.GetCamerShake(), activeWeapon.GetCurrentWeaponName());
     }
 
     public void ApplyAimingAttributes()
