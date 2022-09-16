@@ -10,14 +10,15 @@ public class CameraShake : MonoBehaviour
     public Animator rigController;
     public Vector2[] recoilPattern;
 
+    [SerializeField]
+    InputController inputController;
+
     public float duration;
     public float yAxisValue;
 
-    [SerializeField]
-    InputController inputController;
+    public int index = 0;
     float horizontalRecoil, verticalRecoil;
     float time;
-    public int index = 0;
 
     private void Awake()
     {
@@ -27,6 +28,11 @@ public class CameraShake : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        UpdateRecoilValue();
+    }
+
+    void UpdateRecoilValue()
     {
         yAxisValue = playerAiming.m_VerticalAxis.Value;
         if (rigController)
@@ -64,6 +70,17 @@ public class CameraShake : MonoBehaviour
         index = NextIndex();
 
         rigController.Play("Recoil " + weaponName, 1, 0.0f);
+    }
+
+    public void PlayMovingCameraEffect()
+    {
+        rigController.Play("Moving Camera Effect");
+    }
+
+    public void PlayAimAnimation(string weaponName)
+    {
+        rigController.Play("Aim " + weaponName + " Effect");
+        Debug.Log("Aim " + weaponName + " Effect");
     }
 
     public void SetUpWeaponRecoilForNewWeapon(Cinemachine.CinemachineVirtualCamera newCamera, Animator newRigController)

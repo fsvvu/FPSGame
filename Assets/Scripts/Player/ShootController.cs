@@ -6,7 +6,12 @@ public class ShootController : MonoBehaviour
 {
     [Header("Shooting")]
     public RaycastWeapon raycastWeapon;
+    public ActiveWeapon activeWeapon;
     public bool isFire;
+
+    [Header("Aiming")]
+    [SerializeField]
+    private PlayerAim playerAim;
 
     private InputController inputController;
 
@@ -58,6 +63,8 @@ public class ShootController : MonoBehaviour
     {
         animationEvents.weaponAnimationEvent.AddListener(OnAnimationEvent);
         inputController = GetComponent<InputController>();
+        playerAim = GetComponent<PlayerAim>();
+        activeWeapon = GetComponent<ActiveWeapon>();
 
         //Weapon sway
         currentAmmo = ammo;
@@ -86,6 +93,11 @@ public class ShootController : MonoBehaviour
             {
                 //Toggle bool
                 outOfAmmo = false;
+            }
+
+            if (inputController.isAim)
+            {
+                PlayAimanimation();
             }
 
             if (inputController.isFire && !outOfAmmo && !isReloading)
@@ -142,7 +154,7 @@ public class ShootController : MonoBehaviour
 
     public void PlayAimanimation()
     {
-        rigController.SetTrigger("Aim");
+        playerAim.PlayAimAnimation(activeWeapon.GetCurrentWeaponName());
     }
 
     public void ApplyAimingAttributes()

@@ -5,10 +5,9 @@ using UnityEngine;
 public class RaycastWeapon : MonoBehaviour
 {
     public GameObject bulletPrefab, magazine;
-    public CameraShake recoil;
+    private CameraShake cameraShake;
 
     public Transform raycastOrigin;
-
     public Transform fpsCameraTransform;
 
     public Transform bulletSpawnPoint, casingSpawnPoint;
@@ -33,7 +32,7 @@ public class RaycastWeapon : MonoBehaviour
 
     private void Start()
     {
-        recoil = GetComponent<CameraShake>();
+        cameraShake = GetComponent<CameraShake>();
         weaponStats = GetComponent<WeaponPickup>().weaponStats;
 
         fpsCameraTransform = Camera.main.transform;
@@ -45,7 +44,7 @@ public class RaycastWeapon : MonoBehaviour
     public void StartFiring()
     {
         muzzleFlash.Emit(1);
-        recoil.GenerateRecoil(weaponStats.name);
+        cameraShake.GenerateRecoil(weaponStats.name);
 
         #region Spawn bullet object and tracer
         //Spawn casing prefab at spawnpoint
@@ -82,7 +81,7 @@ public class RaycastWeapon : MonoBehaviour
 
     public void StopFiring()
     {
-        recoil.ResetRecoil(weaponStats.name);
+        cameraShake.ResetRecoil(weaponStats.name);
     }
 
     private void OnDrawGizmos()

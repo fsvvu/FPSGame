@@ -13,13 +13,13 @@ public class MainPlayerAnimator : MonoBehaviour
     private MovementController movementController;
 
     [SerializeField]
-    private bool endFireSession = true;
+    private bool exitFireSession = true;
     [SerializeField]
-    private bool endFireAnimation = true;
+    private bool exitFireAnimation = true;
     [SerializeField]
-    private string currentFireAnimation;
+    private string currentFireAnimationName;
     [SerializeField]
-    private float timeEndFireAnimation = 1f;
+    private float exitFireAnimationTime = 1f;
 
     private InputController inputController;
     private ShootController shootController;
@@ -86,26 +86,26 @@ public class MainPlayerAnimator : MonoBehaviour
         #region Shoot
         if (/*ActiveWeapon.Instance.*/activeweapon.isHoldWeapon) // only when test pickup weapon system
         {
-            if (endFireSession)
+            if (exitFireSession)
             {
                 //Single Shoot
-                if (Input.GetMouseButtonDown(0) && endFireAnimation)
+                if (Input.GetMouseButtonDown(0) && exitFireAnimation)
                 {
-                    currentFireAnimation = "single";
+                    currentFireAnimationName = "single";
 
                     animator.SetBool("isFire", shootController.isFire);
                     animator.SetFloat("fireValue", 0);
                     animator.SetFloat("fireRate", 1);
 
-                    endFireSession = false;
-                    endFireAnimation = false;
+                    exitFireSession = false;
+                    exitFireAnimation = false;
 
                     StartCoroutine(ApllyFireRateAnimation());
                     StartCoroutine(EndSingleFireAnimation());
                 }
                 else if (Input.GetMouseButton(0) && inputController.fireValue == 2)
                 {
-                    currentFireAnimation = "auto";
+                    currentFireAnimationName = "auto";
 
                     animator.SetBool("isFire", shootController.isFire);
                     animator.SetFloat("fireValue", 1);
@@ -115,9 +115,9 @@ public class MainPlayerAnimator : MonoBehaviour
 
             if (!Input.GetMouseButtonDown(0) && !Input.GetMouseButton(0) && (inputController.fireValue == 0))
             {
-                currentFireAnimation = "none";
+                currentFireAnimationName = "none";
                 animator.SetBool("isFire", false);
-                endFireAnimation = true;
+                exitFireAnimation = true;
             }
         }
         #endregion
@@ -129,20 +129,20 @@ public class MainPlayerAnimator : MonoBehaviour
     public IEnumerator ApllyFireRateAnimation()
     {
         yield return new WaitForSeconds(1/ shootController.fireRate);
-        endFireSession = true;
+        exitFireSession = true;
     }
     
     public IEnumerator EndSingleFireAnimation()
     {
-        yield return new WaitForSeconds(timeEndFireAnimation);
+        yield return new WaitForSeconds(exitFireAnimationTime);
         if (inputController.fireValue > 0)
         {
-            endFireAnimation = false;
+            exitFireAnimation = false;
             animator.SetBool("isFire", true && shootController.isFire);
         }
         else
         {
-            endFireAnimation = true;
+            exitFireAnimation = true;
             animator.SetBool("isFire", false);
         }
     }

@@ -31,7 +31,7 @@ public class ActiveWeapon : MonoBehaviour
     public Transform rightHandHolder, leftHandHolder;
     public Transform gunCamera;
     public List<WeaponPickup> triggerWeaponList = new List<WeaponPickup>();
-    public float minDistanceToWeapon = 5/*, countWeponInArea = 0*/;
+    public float minDistanceToWeapon = 5;
     public int activeWeaponIndex = 3;
     public bool isHoldWeapon = false;
 
@@ -315,6 +315,11 @@ public class ActiveWeapon : MonoBehaviour
             }
         }
         return weapon;
+    }
+
+    public string GetCurrentWeaponName()
+    {
+        return equippedWeapon[activeWeaponIndex].weaponStats.name;
     }
 
     //[ContextMenu("Save Weapon Pose")]

@@ -5,26 +5,23 @@ using UnityEngine;
 public class PlayerAim : MonoBehaviour
 {
     private InputController inputController;
-    private ShootController shootController;
+    private CameraShake cameraShake;
 
     // Start is called before the first frame update
     void Start()
     {
         inputController = GetComponent<InputController>();
-        shootController = GetComponent<ShootController>();
+        cameraShake = GetComponent<CameraShake>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayAimAnimation();
+
     }
 
-    void PlayAimAnimation()
+    public void PlayAimAnimation(string weaponName)
     {
-        if (inputController.isAim)
-        {
-            shootController.PlayAimanimation();
-        }
+        cameraShake.PlayAimAnimation(weaponName);
     }
 }
