@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    //public List<PhysicMaterial> physicMaterials;
     public LayerMask groundCheckLayers = -1;
+
     public float runSpeed, walkSpeed, onAimOrFireSpeed, jumpForce;
     public float jumpDelay;
     public float groundCheckDistance = 0.05f;
@@ -19,11 +19,14 @@ public class MovementController : MonoBehaviour
     [SerializeField]
     private new Rigidbody rigidbody;
     [SerializeField]
-    private Vector3 movementVector;
+    private Vector3 movementDirection;
 
+    [SerializeField]
+    private Animator rigController;
     private InputController inputController;
     private CapsuleCollider capsuleCollider;
     private MainPlayerAnimator mainCharacterAnimator;
+
     private Vector3 m_GroundNormal;
 
     public float k_GroundCheckDistanceInAir = 0.07f;
@@ -71,7 +74,8 @@ public class MovementController : MonoBehaviour
 
     void Move()
     {
-        movementVector = (transform.forward * inputController.rawVertical + transform.right * inputController.rawHorizontal).normalized;
+        movementDirection = (transform.forward * inputController.rawVertical + transform.right * inputController.rawHorizontal).normalized;
+        PlayMovingCameraEffect(!inputController.isIdle);
 
         if ((inputController.rawVertical > 0) && !inputController.isAim)
         {
@@ -82,7 +86,7 @@ public class MovementController : MonoBehaviour
             runSpeed = onAimOrFireSpeed;
         }
 
-        rigidbody.MovePosition(rigidbody.position + movementVector * runSpeed * Time.deltaTime);
+        rigidbody.MovePosition(rigidbody.position + movementDirection * runSpeed * Time.deltaTime);
     }
 
     void GroundCheck()
@@ -179,4 +183,9 @@ public class MovementController : MonoBehaviour
         //yield return new WaitForSeconds((18 / 31) * (16 / 3)); //play a part of animation before jump t = 8/15 * 0.533 8/15 frame length = 0.533s
         rigidbody.AddForce(transform.up * jumpForce);
     }
+
+    void PlayMovingCameraEffect(bool isMove)
+    {
+        rigController.SetBool("inMove", isMove);
+    }   
 }

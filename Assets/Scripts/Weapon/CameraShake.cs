@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour
+public class CameraShake : GameObserver
 {
     public Cinemachine.CinemachineVirtualCamera playerCamera;
     public Cinemachine.CinemachinePOV playerAiming;  
@@ -12,6 +12,8 @@ public class CameraShake : MonoBehaviour
 
     [SerializeField]
     InputController inputController;
+    [SerializeField]
+    WeaponPickup weaponPickup;
 
     public float duration;
     public float yAxisValue;
@@ -20,10 +22,16 @@ public class CameraShake : MonoBehaviour
     float horizontalRecoil, verticalRecoil;
     float time;
 
-    private void Awake()
+    public override void Awake()
     {
         cameraShake = GetComponent<Cinemachine.CinemachineImpulseSource>();
         playerAiming = playerCamera.GetCinemachineComponent<Cinemachine.CinemachinePOV>();
+        weaponPickup = GetComponent<WeaponPickup>();
+    }
+
+    private void Start()
+    {
+        gameEvent?.Subscribe(this);
     }
 
     // Update is called once per frame
@@ -37,7 +45,8 @@ public class CameraShake : MonoBehaviour
         yAxisValue = playerAiming.m_VerticalAxis.Value;
         if (rigController)
         {
-            rigController.SetBool("isAttack", inputController.isFire);
+            if(weaponPickup.weaponSlot == ActiveWeapon.WeaponSlot.Sidearm) rigController.SetBool("inAttack", inputController.isFire && inputController.isSingleFire);
+            else rigController.SetBool("inAttack", inputController.isFire);
         }
 
         if (time > 0)
@@ -72,18 +81,19 @@ public class CameraShake : MonoBehaviour
         rigController.Play("Recoil " + weaponName, 1, 0.0f);
     }
 
-    public void PlayMovingCameraEffect()
-    {
-        rigController.Play("Moving Camera Effect");
-    }
-
     public void PlayAimAnimation(string weaponName, bool inAim)
     {
-        if (inAim == false)rigController.Play("Aim " + weaponName + " Effect");
-        //else rigController.StopPlayback();
+        if (inAim == false) rigController.Play("Aim " + weaponName + " Effect");
+        else rigController.Play("Exit Aim " + weaponName + " Effect");
 
         rigController.SetBool("inAim", !inAim);
     }
+
+    //public override void Execute(IGameEvent gameEvent)
+    //{
+    //    Debug.Log($"Run from children {this}");
+    //    base.Execute(gameEvent);
+    //}
 
     public void SetUpWeaponRecoilForNewWeapon(Cinemachine.CinemachineVirtualCamera newCamera, Animator newRigController)
     {

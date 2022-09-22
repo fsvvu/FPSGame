@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Weapon\WeaponAnimationEvents.cs" />
     <Compile Include="Assets\RockVR\Video\Demo\Scripts\VideoCaptureUI.cs" />
     <Compile Include="Assets\_Imp Asset\_Temp_Low Poly FPS Pack - Free (Sample)\Components\Scripts\Explosions_&amp;_Impacts\ImpactScript.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAim.cs" />
     <Compile Include="Assets\Scripts\Player\RaycastWeapon.cs" />
     <Compile Include="Assets\Scripts\UIGameTest.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
@@ -138,7 +139,10 @@
     <Compile Include="Assets\RockVR\Video\Scripts\VideoCaptureCtrl.cs" />
     <Compile Include="Assets\RockVR\Video\Scripts\VideoPlayer.cs" />
     <Compile Include="Assets\Scripts\SetupUtilities.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerAim.cs" />
+    <Compile Include="Assets\Scripts\Pattern\Observer\GameEvent.cs" />
+    <Compile Include="Assets\Scripts\Pattern\Observer\IObserver.cs" />
+    <Compile Include="Assets\Scripts\Pattern\Observer\IGameEvent.cs" />
+    <Compile Include="Assets\Scripts\Pattern\Observer\GameObserver.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\RockVR\Video\Shaders\Cubemap2Equirectangular.shader" />

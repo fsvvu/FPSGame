@@ -12,7 +12,7 @@ public class InputController : MonoBehaviour
     public bool isIdle;
     public bool isWalk, isWalkRight, isWalkLeft, isWalkBackward, isWalkForward;
     public bool isAim;
-    public bool isFire, isStopFire;
+    public bool isFire, isSingleFire, isStopFire;
     public bool isReload;
     public bool isManipulationFire;
     public bool isJump, isBrake;
@@ -80,6 +80,9 @@ public class InputController : MonoBehaviour
         {
             isStopFire = true;
         }
+
+        if (Input.GetMouseButtonDown(0)) isSingleFire = true;
+        else isSingleFire = false;
 
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {

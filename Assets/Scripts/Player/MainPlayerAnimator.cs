@@ -107,7 +107,8 @@ public class MainPlayerAnimator : MonoBehaviour
                 {
                     currentFireAnimationName = "auto";
 
-                    animator.SetBool("isFire", shootController.isFire);
+                    if(activeweapon.activeWeaponIndex == 1) animator.SetBool("isFire", shootController.isFire && inputController.isSingleFire);
+                    else animator.SetBool("isFire", shootController.isFire);
                     animator.SetFloat("fireValue", 1);
                     animator.SetFloat("fireRate", shootController.fireRate / 50);
                 }

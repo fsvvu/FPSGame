@@ -79,7 +79,6 @@ public class ActiveWeapon : MonoBehaviour
     {
         rigController.SetBool("isHoldWeapon", isHoldWeapon);
 
-
         if (Input.GetKeyDown(KeyCode.KeypadEnter)) Time.timeScale = 1;
 
         if (Input.GetKeyDown(KeyCode.G))
@@ -137,6 +136,8 @@ public class ActiveWeapon : MonoBehaviour
        
         EquipWeapon(WeaponAction.Switch, activateWeapon, true);
         SetupNewWeapon(activateWeapon.weaponStats);
+
+        rigController.SetInteger("weaponIndex", activeWeaponIndex);
     }
 
     public void EquipWeapon(WeaponAction action, WeaponPickup newWeapon, bool runAnimation, bool isExistWeaponSlot = false)
@@ -182,7 +183,7 @@ public class ActiveWeapon : MonoBehaviour
             //UI, Layer, Physic
             if (newWeapon.weaponUI) newWeapon.weaponUI.gameObject.SetActive(false);
             SetupUtilities.SetLayers(equippedWeaponParent[weaponSlotIndex], "Local Player", "Local Player", "Effect");
-            equippedWeaponParent[weaponSlotIndex].gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            if (weaponSlotIndex != 2) equippedWeaponParent[weaponSlotIndex].gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
             //Set parent for weapon, change noParent value and run animation
             newWeapon.noParent = false;
@@ -223,8 +224,8 @@ public class ActiveWeapon : MonoBehaviour
 
             SetupUtilities.SetLayers(equippedWeaponParent[weaponSlotIndex], "Ignore Player", "Only Player", null);
 
-            equippedWeaponParent[weaponSlotIndex].GetComponent<Rigidbody>().isKinematic = false;
-            equippedWeaponParent[weaponSlotIndex].GetComponent<Rigidbody>().AddForce(gunCamera.forward * 2, ForceMode.Impulse);
+            if (weaponSlotIndex != 2)  equippedWeaponParent[weaponSlotIndex].GetComponent<Rigidbody>().isKinematic = false;
+            if (weaponSlotIndex != 2)  equippedWeaponParent[weaponSlotIndex].GetComponent<Rigidbody>().AddForce(gunCamera.forward * 2, ForceMode.Impulse);
 
             isHoldWeapon = false;
 

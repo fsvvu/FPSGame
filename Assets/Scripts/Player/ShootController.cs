@@ -29,6 +29,12 @@ public class ShootController : MonoBehaviour
     public int ammo;
     public bool autoReload;
 
+    [Header("Events")]
+    [SerializeField]
+    GameEvent aimEvent;
+    [SerializeField]
+    GameEvent fireEvent;
+
     //Used for fire rate
     private float lastFired;
     private bool isReloading;
@@ -95,12 +101,14 @@ public class ShootController : MonoBehaviour
                 outOfAmmo = false;
             }
 
-            if (inputController.isAim)
+            if (inputController.isAim && activeWeapon.activeWeaponIndex == 0)
             {
+                aimEvent.Notify();
                 PlayAimanimation();
             }
 
-            if (inputController.isFire && !outOfAmmo && !isReloading)
+            if (((inputController.isFire && activeWeapon.activeWeaponIndex == 0) || (inputController.isSingleFire && activeWeapon.activeWeaponIndex != 0))
+                && !outOfAmmo && !isReloading)
             {
                 //Shoot automatic
                 if (Time.time - lastFired > 1 / fireRate)
@@ -119,8 +127,10 @@ public class ShootController : MonoBehaviour
                     {
                     }
 
+                    fireEvent.Notify();
                     isFire = true;
                     raycastWeapon.StartFiring();
+                    //Debug.Log("Fire");
                 }
             }
 
@@ -143,10 +153,13 @@ public class ShootController : MonoBehaviour
     IEnumerator Reload()
     {
         rigController.SetTrigger("ReloadAK");
+        rigController.SetBool("reloading", true);
+        rigController.Play("Impulse Camera.Reload " + activeWeapon.GetCurrentWeaponName() + " Camera Effect", 1, 0f);
         isReloading = true;
         yield return new WaitForSeconds(1);
         //Restore ammo when reloading
         rigController.SetTrigger("ReloadAK");
+        rigController.SetBool("reloading", false);
         currentAmmo = ammo;
         outOfAmmo = false;
         isReloading = false;
@@ -161,10 +174,10 @@ public class ShootController : MonoBehaviour
     {
 
     }
-    
+
     void OnAnimationEvent(string eventName)
     {
-        switch (eventName)  
+        switch (eventName)
         {
             case "detach_magazine":
                 DeTachMagazine();
@@ -178,7 +191,7 @@ public class ShootController : MonoBehaviour
             case "attach_magazine":
                 AttachMagazine();
                 break;
-        }    
+        }
     }
 
     void DeTachMagazine()
@@ -189,7 +202,7 @@ public class ShootController : MonoBehaviour
 
     void DropMagazine()
     {
-            
+
     }
 
     void RefillMagazine()
